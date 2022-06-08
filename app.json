@@ -1,0 +1,41 @@
+{
+    "name": "Müzik botu",
+    "description": "Yt'den şarkı alır ve telegrama gönderir",
+    "env": {
+        "API_ID": {
+            "description": "13100218",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "8f0fb4b161a3fdfc291b798572ad5ead",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "5462358556:AAEpdEMSyko0EZya88wDRuJ8nPMuxY5eecs",
+            "required": true
+        },
+        "OWNER_ID": {
+            "description": "5307220102",
+            "required": true
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "addons": [
+        {
+            "plan": "heroku-postgresql",
+            "options": {
+                "version": "12"
+            }
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
